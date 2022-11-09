@@ -1,0 +1,10 @@
+<h1>hello</h1>
+
+
+<%= form_with model: @climate do |form| %>
+  <p> latitude: <%= form.text_field :latituge %></p><%= @latitude %>
+  <p>Longitude : <%= form.text_field :longitude %></p><%= @logitude %>
+  
+
+  <%= form.submit %>
+<% end %>

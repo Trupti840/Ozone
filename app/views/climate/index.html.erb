@@ -1,0 +1,24 @@
+
+<div class="jumbotron">
+
+  <strong><h1 class="display-4"><%= @final_output[0]["main"]%></strong>
+  <img src="http://openweathermap.org/img/wn/<%=@final_output[0]["icon"]%>.png" , height="100"/>
+  </h1>
+
+  <h4 class="display-4"><%= Date.today %></h4>
+
+  <p class="lead">This is a Weather Forcast of today </p>
+  <hr class="my-4">
+  <strong>
+  <p>Description: <%=@final_output[0]["description"]%></p>
+  <p>Temprature: <%=@output["main"]["temp"]%>(in Kelvin) </p>
+  <p>Humidity: <%=@output["main"]["humidity"]%> </p>
+  <p>Reloade to update the Weather Forcast readings..</p>
+  </strong>
+  <%= link_to "Change area", climate_chnage_path, class:"btn btn-primary btn-lg"%>
+  
+</div>
+
+<br/>
+<br/>
+
